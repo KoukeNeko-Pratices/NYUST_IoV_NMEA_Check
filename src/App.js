@@ -82,7 +82,6 @@ function App() {
         return result
     }
 
-
     const [marker, setMarker] = React.useState([]);
     return (<>
             <Wrapper apiKey="AIzaSyCLdqEyGV0LvA9pOb7Adx6Fm40yqJS9GrU" render={render}>
