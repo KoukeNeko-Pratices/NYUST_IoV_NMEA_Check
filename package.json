@@ -2,7 +2,7 @@
   "name": "map_sheng",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://koukeneko.github.io/NYUST_IoV_NMAP_Check/",
+  "homepage": "https://koukeneko-pratices.github.io/NYUST_IoV_NMAP_Check/",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
