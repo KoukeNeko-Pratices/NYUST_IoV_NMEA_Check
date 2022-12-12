@@ -21,7 +21,7 @@ export function Here(options) {
         strokeWeight: 2,
         rotation: 0,
         scale: 1,
-        anchor: new window.google.maps.Point(15, 30),
+        anchor: new window.google.maps.Point(0, 0),
     };
 
     React.useEffect(() => {
