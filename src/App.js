@@ -15,7 +15,7 @@ const render = (status): ReactElement => {
 };
 
 function App() {
-    const zoom = 10;
+    const zoom = 14;
 
     const [center, setCenter] = React.useState({lat: 0, lng: 0});
     const [here, setHere] = React.useState({lat: 0, lng: 0});
@@ -28,10 +28,15 @@ function App() {
                         lat: position.coords.latitude,
                         lng: position.coords.longitude
                     })
-                    setCenter({
-                        lat: position.coords.latitude,
-                        lng: position.coords.longitude
-                    })
+                    if (!window.Loaded && center.lat === 0 && center.lng === 0) {
+                        setCenter({
+                            lat: position.coords.latitude,
+                            lng: position.coords.longitude
+                        })
+                        window.Loaded = true
+                    }
+                }, positionError => {
+                    console.log(positionError)
                 }
             )
         } else {
