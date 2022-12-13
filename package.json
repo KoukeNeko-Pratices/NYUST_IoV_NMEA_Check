@@ -2,7 +2,7 @@
   "name": "map_sheng",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://koukeneko-pratices.github.io/NYUST_IoV_NMEA_Check/",
+  
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
