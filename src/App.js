@@ -61,8 +61,10 @@ function App() {
         const inputLines = inputFile.split('\n');
 
         for (const line of inputLines) {
-            const lineData = line.split('] ')[1];
-            const data = lineData.split(',');
+            // const lineData = line.split('] ')[1];
+            // const data = lineData.split(',');
+
+            const data = line.split(',');
 
             if (data[0] === '$GNGGA') {
                 // Extract latitude and longitude from the data
