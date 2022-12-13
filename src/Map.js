@@ -56,7 +56,7 @@ export function Map({onClick, onIdle, children, style, ...options}) {
 }
 
 function useDeepCompareEffectForMaps(callback, dependencies) {
-    React.useEffect(callback, dependencies.map(useDeepCompareMemoize));
+    React.useEffect(callback, [callback]);
 }
 
 function useDeepCompareMemoize(value) {
