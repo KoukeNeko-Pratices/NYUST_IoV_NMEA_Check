@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import './App.css';
 import {MyMapComponent} from "./MyMapComponent";
 import {ReactElement} from "react";
@@ -29,6 +29,7 @@ function App() {
                         lng: position.coords.longitude
                     })
                     if (!window.Loaded && center.lat === 0 && center.lng === 0) {
+                        console.log("Move camera");
                         setCenter({
                             lat: position.coords.latitude,
                             lng: position.coords.longitude
@@ -43,10 +44,13 @@ function App() {
             // error => console.log(error)
         }
     }
-    setTimeout(() => {
-        getGeoLocation()
-    }, 1000)
 
+    useEffect(() => {
+        // Update the document title using the browser API
+        setTimeout(() => {
+            getGeoLocation()
+        }, 1000)
+    }, []);
     let doConvert = (inputFile) => {
         // prepare a list to store the data and save to the file
         const data = [];
