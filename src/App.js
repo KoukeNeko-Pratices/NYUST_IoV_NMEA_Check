@@ -72,8 +72,8 @@ function App() {
                     longitude = (parseInt(longitude) * -1).toString();
                 }
 
-                latitude = latitude.slice(0, 2) + '.' + Math.round((parseInt(latitude.slice(2).replace('.', '')) / 60)).toString();
-                longitude = longitude.slice(0, 3) + '.' + Math.round((parseInt(longitude.slice(3).replace('.', '')) / 60)).toString();
+                latitude = latitude.slice(0, 2) + '.' + ((parseInt(latitude.slice(2).replace('.', '')) / 60).toString()).replace('.', '');
+                longitude = longitude.slice(0, 3) + '.' + ((parseInt(longitude.slice(3).replace('.', '')) / 60).toString()).replace('.', '');
 
                 console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
 
